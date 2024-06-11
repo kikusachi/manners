@@ -4,8 +4,35 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <script>
+            // 特定のiframeのみを表示する関数
+            function showIframe(id) {
+                // すべてのiframeを非表示にする
+                var iframes = document.querySelectorAll('iframe');
+                iframes.forEach(function(iframe) {
+                    iframe.style.display = 'none';
+                });
+                // 指定されたiframeのみを表示する
+                document.getElementById(id).style.display = 'block';
+            }
+
+            // ページ読み込み時に最初のiframeを表示
+            window.onload = function() {
+                showIframe('topframe');
+            }
+        </script>
     </head>
     <body>
-        <iframe src="top.html" width="100%" height="500px"></iframe>
+        <header>
+        </header>
+
+        <!-- それぞれの処理をメイン画面で呼び出している -->
+        <iframe id="topframe" src="top.html"></iframe>
+        <iframe id="questionframe" src="question.html" width="100%" height="500px"></iframe>
+        <iframe id="selfintroductionframe" src="self-introduction.html" width="100%" height="500px"></iframe>
+        <iframe id="studyframe" src="study.html" width="100%" height="500px"></iframe>
+
+        <footer>
+        </footer>
     </body>
 </html>
