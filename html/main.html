@@ -5,40 +5,45 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <script>
-            // 特定のiframeのみを表示する関数
-            function showIframe(id) {
-                // すべてのiframeを非表示にする
-                var iframes = document.querySelectorAll('iframe');
-                iframes.forEach(function(iframe) {
-                    iframe.style.display = 'none';
-                });
-                // 指定されたiframeのみを表示する
-                document.getElementById(id).style.display = 'block';
-            }
-
-            // ページ読み込み時に最初のiframeを表示・一番最初に表示させる画面はここ
-            window.onload = function() {
-                showIframe('topframe');
+            //指定したページを読み込んで表示させる処理
+            function loadPage(page) {
+                document.getElementById('contentFrame').src = page;
             }
         </script>
     </head>
 
     <body>
-        <header>
-            <h1></h1>
-            <a href="main.html">トップ画面へ</a>
-            <a href="top.html">クイズ画面へ</a>
-            <a href="top.html">自己紹介画面へ</a>
-            <a href="top.html">勉強画面へ</a>
-        </header>
+        <div class="main">
+            <header>
+                <h1 class="header-name"> 東洋ワーク株式会社 </h1>
+                
+                <div class="header-menu">
+                    <a href="#" onclick="loadPage('top.html')">トップ画面へ</a>
+                    <a href="question.html" class="menu-name">クイズ画面へ</a>
+                    <a href="self-introduction.html" class="menu-name">自己紹介画面へ</a>
+                    <a href="study.html" class="menu-name">勉強画面へ</a>
+                </div>
+            </header>
 
-        <!-- それぞれの処理をメイン画面で呼び出している -->
-        <iframe id="topframe" src="top.html" width="100%" height="100%"></iframe>
-        <iframe id="questionframe" src="question.html" width="100%" height="500px"></iframe>
-        <iframe id="selfintroductionframe" src="self-introduction.html" width="100%" height="500px"></iframe>
-        <iframe id="studyframe" src="study.html" width="100%" height="500px"></iframe>
+            <div class="main">
+                <div class="side-menu">
+                    <ul>
+                        <!-- それぞれの処理で記載する
+                        例：勉強画面→面接での注意事項、敬語など -->
+                        <li><a href="#" onclick="loadPage('top.html')">Top</a></li>
+                        <li><a href="#" onclick="loadPage('question.html')">Question</a></li>
+                        <li><a href="#" onclick="loadPage('self-introduction.html')">Self Introduction</a></li>
+                        <li><a href="#" onclick="loadPage('study.html')">Study</a></li>        
+                    </ul>
+                </div>
+                <!-- それぞれの処理をメイン画面で呼び出している -->
+                <!-- サイドバーでコンテンツが切り替わるようにしている -->
+                <iframe id="contentFrame" src="top.html" width="100%" height="100%"></iframe>
+         
+            </div>
 
-        <footer>
-        </footer>
+            <footer>
+            </footer>
+        </div>>
     </body>
 </html>
