@@ -16,14 +16,19 @@
                 document.getElementById(id).style.display = 'block';
             }
 
-            // ページ読み込み時に最初のiframeを表示
+            // ページ読み込み時に最初のiframeを表示・一番最初に表示させる画面はここ
             window.onload = function() {
                 showIframe('topframe');
             }
         </script>
     </head>
+
     <body>
         <header>
+            <a href="main.html">トップ画面へ</a>
+            <a href="top.html">クイズ画面へ</a>
+            <a href="top.html">自己紹介画面へ</a>
+            <a href="top.html">勉強画面へ</a>
         </header>
 
         <!-- それぞれの処理をメイン画面で呼び出している -->
