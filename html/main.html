@@ -9,6 +9,19 @@
             function loadPage(page) {
                 document.getElementById('contentFrame').src = page;
             }
+
+            // サイドバーを読み込む処理
+            function loadSidebar() {
+                fetch('sidebar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('sidebar').innerHTML = data;
+                });
+            }
+            // ページロード時にサイドバーを読み込む
+            window.onload = function() {
+                loadSidebar();
+            }
         </script>
     </head>
 
@@ -18,25 +31,18 @@
                 <h1 class="header-name"> 東洋ワーク株式会社 </h1>
                 
                 <div class="header-menu">
-                    <a href="#" onclick="loadPage('top.html')">トップ画面へ</a>
-                    <a href="question.html" class="menu-name">クイズ画面へ</a>
-                    <a href="self-introduction.html" class="menu-name">自己紹介画面へ</a>
-                    <a href="study.html" class="menu-name">勉強画面へ</a>
+                    <!-- どの画面でも共通してトップ画面やクイズ画面に移動できるようにしている -->
+                    <a href="#" onclick="loadPage('top.html')"  class="menu-name">トップ画面へ</a>
+                    <a href="#" onclick="loadPage('question.html')"  class="menu-name">クイズ画面へ</a>
+                    <a href="#" onclick="loadPage('self-introduction.html')"  class="menu-name">自己紹介画面へ</a>
+                    <a href="#" onclick="loadPage('study.html')"  class="menu-name">勉強画面へ</a>
                 </div>
             </header>
 
-            <div class="main">
-                <div class="side-menu">
-                    <ul>
-                        <!-- それぞれの処理で記載する
-                        例：勉強画面→面接での注意事項、敬語など -->
-                        <li><a href="#" onclick="loadPage('top.html')">Top</a></li>
-                        <li><a href="#" onclick="loadPage('question.html')">Question</a></li>
-                        <li><a href="#" onclick="loadPage('self-introduction.html')">Self Introduction</a></li>
-                        <li><a href="#" onclick="loadPage('study.html')">Study</a></li>        
-                    </ul>
-                </div>
-                <!-- それぞれの処理をメイン画面で呼び出している -->
+            <div class="main">                
+                 <!-- サイドバーのコンテナ:サイドバー表示 -->
+                <div id="sidebar"></div>
+                <!--それぞれの処理をメイン画面で呼び出している -->
                 <!-- サイドバーでコンテンツが切り替わるようにしている -->
                 <iframe id="contentFrame" src="top.html" width="100%" height="100%"></iframe>
          
