@@ -13,7 +13,6 @@
 
             // サイドバーを読み込む処理
             function loadSidebar() {
-                //サイドバーの処理をしているHTMLファイルを読み込むと同時に''内部に記載している文字列をHTMLとして認識している
                     document.getElementById('sidebar').innerHTML = `
                     <ul>
                         <li><a href="#" onclick="loadPage('top.html')">トップ画面へ</a></li>
@@ -33,33 +32,30 @@
     </head>
 
     <body>
-        <div class="index">
-            <!-- ヘッダーの処理 -->
-            <header class = "header">
+        <div class="main">
+            <header>
                 <h1 class="header-name"> 東洋ワーク株式会社 </h1>
                 
                 <div class="header-menu">
                     <!-- どの画面でも共通してトップ画面やクイズ画面に移動できるようにしている -->
                     <a href="#" onclick="loadPage('top.html')"  class="menu-name">トップ画面へ</a>
-                    <a href="#" onclick="loadPage('question.html')"  class="menu-name">クイズ画面へ</a>
-                    <a href="#" onclick="loadPage('self-introduction.html')"  class="menu-name">自己紹介画面へ</a>
-                    <a href="#" onclick="loadPage('study.html')"  class="menu-name">勉強画面へ</a>
+                    <a href="#" onclick="loadPage('question.html')"  class="menu-name">あいさつについて</a>
+                    <a href="#" onclick="loadPage('self-introduction.html')"  class="menu-name">敬語について</a>
+                    <a href="#" onclick="loadPage('study.html')"  class="menu-name">面接について</a>
                 </div>
             </header>
 
             <div class="main">                
-                 <!-- サイドバーのコンテナ:サイドバーを表示させる処理だが、非表示にCSSでしている-->
-                <div id="sidebar" class="hidden"></div>
-                <!--それぞれの処理をメイン画面で呼び出している -->
-                <!-- サイドバーでコンテンツが切り替わるようにしている -->
+                <!-- サイドバーのコンテナ:サイドバーを表示させる処理だが、非表示にCSSでしている
+                <div id="sidebar" class="hidden"></div>-->
+
                 <iframe id="contentFrame" src="top.html" width="100%" height="100%"></iframe>
-         
             </div>
 
             <footer>
                 制作者の名前とかを書く
                 可能ならURLで飛べるようにする
             </footer>
-        </div>>
+        </div>
     </body>
 </html>

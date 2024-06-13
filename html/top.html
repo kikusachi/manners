@@ -14,9 +14,11 @@
                 // `<a href="top.html">トップ画面へ!</a>`のように飛ばしたいファイル名・リンクにしたい文字列などを指定する
                 document.getElementById('sidebar').innerHTML 
                 = `
-                <a href="study.html">勉強画面へ!</a><br/>
-                <a href="self-introduction.html">自己紹介画面へ!</a><br/>
-                <a href="question.html">クイズ画面へ!</a><br/>
+                <ul>
+                    <li><a href="study.html">勉強画面へ!</a></li>
+                    <li><a href="self-introduction.html">自己紹介画面へ!</a></li>
+                    <li><a href="question.html">クイズ画面へ!</a></li>
+                </ul>
                 `;
             }
 
@@ -35,7 +37,35 @@
             </div>
 
             <!-- 以下中身を編集する -->
-     
+            <div class = "main-page">
+                <div class = "title">・研修生一覧</div>
+                <div class = "images">
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member-name">名前</div>
+                    </div>
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member-name">名前</div>
+                    </div>
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member-name">名前</div>
+                    </div>
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member-name">名前</div>
+                    </div>
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member-name">名前</div>
+                    </div>
+                </div>
+                <div class = "title">・目次</div>
+                <div class = "contents">
+
+                </div>
+            </div>
         </div>
     </body>
 </html>

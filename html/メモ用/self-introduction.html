@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            //指定したページを読み込んで表示させる処理
+            function loadPage(page) {
+                parent.loadPage(page); // 親フレームの関数を呼び出す
+            }
+            // サイドバーを読み込む処理
+            function loadSidebar() {
+                fetch('sidebar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('sidebar').innerHTML = data;
+                    });
+            }
+            // ページロード時にサイドバーを読み込む
+            window.onload = function() {
+                loadSidebar();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <!-- サイドバーの処理
+            <div class="side-menu" id="sidebar">
+                <ul>
+                    <li><a href="#" onclick="loadPage('top.html')">TOPへ</a></li>
+                    <li><a href="#" onclick="loadPage('question.html')">Question</a></li>
+                    <li><a href="#" onclick="loadPage('self-introduction.html')">Self Introduction</a></li>
+                    <li><a href="#" onclick="loadPage('study.html')">Study</a></li>        
+                </ul>
+            </div> -->
+
+            <!-- 以下追加修正 -->
+            <div class = "main-page">
+                <div class = "title">・敬語について</div>
+                <div class = "shows">
+                    <div class = "show">
+                        <div class = "show-title">敬語</div>
+                        <div class = "show-text">
+                            <div class="text">敬語について</div>
+                        </div>
+                    </div>
+                    <div class = "show">
+                        <div class = "show-title">敬語</div>
+                        <div class = "show-text">
+                            <div class="text">敬語について</div>
+                        </div>
+                    </div>
+                    <div class = "show">
+                        <div class = "show-title">敬語</div>
+                        <div class = "show-text">
+                            <div class="text">敬語について</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
