@@ -1,11 +1,7 @@
-a{
+/* a{
     text-decoration: none;
     color: black;
-}
-
-ul {
-    list-style: none;
-  }
+} */
 
 .index{
     width: 100%;
@@ -18,27 +14,34 @@ ul {
     background-color: blue;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .header-name{
     font-size: 48px;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 
 .header-menu{
     display: flex;
+    margin-left: 50px;
 }
 
 .menu-name{
-    margin-right: 60px;
+    margin-right: 45px;
     font-size: 36px;
 }
 
 .main{
     width: 100%;
     height: 100%;
-    display: flex;
+    /* display: flex; */
+}
+
+.main-page{
+    width: 100%;
+    height: 100%;
+    background-color: darkgray;
 }
 
 .side-bar{
@@ -48,10 +51,13 @@ ul {
 }
 
 .side-menu{
-    margin-top: 50px;
+    width: 180px;
+    height: 100%;
+    background-color: blueviolet;
+    /* margin-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .side-menu-name{
@@ -69,31 +75,77 @@ ul {
     justify-content: space-around;
 }
 
+.title{
+    font-size: 48px;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 50px;
+}
+
 .image{
-    width: 260px;
+    width: 100%;
     height: 300px;
-    margin: 25px 50px 0;
+    background-color: rgb(219, 219, 246);
+    /* margin: 25px 50px 0; */
+}
+
+.members{
+    width: 260px;
+    height: 350px;
+    margin: 0 100px 50px;
+}
+
+.member-name{
+    width: 100%;
+    height: 35px;
+    font-size: 24px;
+    text-align: center;
+    background-color: cadetblue;
+}
+
+.shows{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 25px 200px;
 }
 
 .show{
-    width: 500px;
-    height: 400px;
-    margin: 0 auto;
+    width: 1000px;
+    height: 200px;
+    margin-bottom: 50px;
+    /* margin: 0 auto; */
 }
 
 .show-title{
     width: 100%;
-    height: 60px;
+    height: 50px;
     background-color: darkblue;
     border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .show-text{
     width: 100%;
-    height: 100%;
+    height: 150px;
     background-color: rgb(219, 219, 246);
     border-radius: 0 0 10px 10px;
+    padding-top: 10px;
 }
+
+.text{
+    margin: 0 10px;
+}
+
+ul {
+    list-style: none;
+  }
 
 .hidden
 {
