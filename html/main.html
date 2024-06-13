@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <title> 仮タイトル：東洋ワーク株式会社 </title>
         <script>
             //指定したページを読み込んで表示させる処理
             function loadPage(page) {
@@ -12,16 +13,21 @@
 
             // サイドバーを読み込む処理
             function loadSidebar() {
-                fetch('sidebar.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('sidebar').innerHTML = data;
-                });
+                    document.getElementById('sidebar').innerHTML = `
+                    <ul>
+                        <li><a href="#" onclick="loadPage('top.html')">トップ画面へ</a></li>
+                        <li><a href="#" onclick="loadPage('question.html')">クイズ画面へ</a></li>
+                        <li><a href="#" onclick="loadPage('self-introduction.html')">自己紹介画面へ</a></li>
+                        <li><a href="#" onclick="loadPage('study.html')">勉強画面へ</a></li>
+                    </ul>
+                `;
             }
             // ページロード時にサイドバーを読み込む
             window.onload = function() {
                 loadSidebar();
             }
+            // 親フレームにloadPage関数を登録
+            window.loadPage = loadPage;
         </script>
     </head>
 
@@ -40,8 +46,8 @@
             </header>
 
             <div class="main">                
-                 <!-- サイドバーのコンテナ:サイドバー表示 -->
-                <div id="sidebar"></div>
+                 <!-- サイドバーのコンテナ:サイドバーを表示させる処理だが、非表示にCSSでしている-->
+                <div id="sidebar" class="hidden"></div>
                 <!--それぞれの処理をメイン画面で呼び出している -->
                 <!-- サイドバーでコンテンツが切り替わるようにしている -->
                 <iframe id="contentFrame" src="top.html" width="100%" height="100%"></iframe>
@@ -49,6 +55,8 @@
             </div>
 
             <footer>
+                制作者の名前とかを書く
+                可能ならURLで飛べるようにする
             </footer>
         </div>>
     </body>

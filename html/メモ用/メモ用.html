@@ -1,0 +1,12 @@
+<!-- 使用しないソースコード -->
+ top.html 
+ // サイドバーを読み込む処理
+ function loadSidebar() {
+     document.getElementById('sidebar').innerHTML = `
+     <ul>
+         <li><a href="#" onclick="loadPage('top.html')">トップ画面へ</a></li>
+         <li><a href="#" onclick="loadPage('question.html')">クイズ画面へ</a></li>
+         <li><a href="#" onclick="loadPage('self-introduction.html')">自己紹介画面へ</a></li>
+         <li><a href="#" onclick="loadPage('study.html')">勉強画面へ</a></li>
+     </ul>`;
+ }
