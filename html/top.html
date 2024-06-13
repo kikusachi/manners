@@ -11,16 +11,19 @@
             }
             // サイドバーを読み込む処理
             function loadSidebar() {
+                // `<a href="top.html">トップ画面へ!</a>`のように飛ばしたいファイル名・リンクにしたい文字列などを指定する
                 document.getElementById('sidebar').innerHTML 
-                = `<a href="study.html">hello!</a>`;
+                = `
+                <a href="study.html">勉強画面へ!</a><br/>
+                <a href="self-introduction.html">自己紹介画面へ!</a><br/>
+                <a href="question.html">クイズ画面へ!</a><br/>
+                `;
             }
 
             // ページロード時にサイドバーを読み込む
-                  window.onload = function() {
+            window.onload = function() {
                 loadSidebar();
             }
-            // // 親フレームにloadPage関数を登録
-            // window.loadPage = loadPage;
         </script>
     </head>
     <body>
@@ -28,14 +31,6 @@
             トップ画面
             <!-- サイドバーの処理 -->
             <div class="side-menu" id="sidebar">
-                <ul>
-                    <!--それぞれの処理で記載する
-                    例：勉強画面→面接での注意事項、敬語など
-                    <li><a href="#" onclick="loadPage('top.html')">TOPへ</a></li>
-                    <li><a href="#" onclick="loadPage('question.html')">Question</a></li>
-                    <li><a href="#" onclick="loadPage('self-introduction.html')">Self Introduction</a></li>
-                    <li><a href="#" onclick="loadPage('study.html')">Study</a></li>   -->     
-                </ul>
                 <iframe id="contentFrame" width="100%" height="100%" src="" frameborder="0"></iframe>
             </div>
 
