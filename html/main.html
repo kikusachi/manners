@@ -35,21 +35,11 @@
     <body>
         <div class="index">
             <!-- ヘッダーの処理 -->
-            <header class = "header">
-                <h1 class="header-name"> 東洋ワーク株式会社 </h1>
-                
-                <div class="header-menu">
-                    <!-- どの画面でも共通してトップ画面やクイズ画面に移動できるようにしている -->
-                    <a href="#" onclick="loadPage('top.html')"  class="menu-name">作者紹介</a>
-                    <a href="#" onclick="loadPage('question.html')"  class="menu-name">挨拶について</a>
-                    <a href="#" onclick="loadPage('self-introduction.html')"  class="menu-name">敬語について</a>
-                    <a href="#" onclick="loadPage('study.html')"  class="menu-name">面接について</a>
-                </div>
-            </header>
+            <div id="header" ></div>
 
             <div class="main">                
                  <!-- サイドバーのコンテナ:サイドバーを表示させる処理だが、非表示にCSSでしている 無いとエラーが出るため記載-->
-                <div id="sidebar" class="hidden"></div>
+                <!--<div id="sidebar" class="hidden"></div>-->
                 <!--それぞれの処理をメイン画面で呼び出している -->
                 <!-- サイドバーでコンテンツが切り替わるようにしている -->
                 <iframe id="contentFrame" src="top.html" width="100%" height="100%"></iframe>
@@ -59,7 +49,8 @@
             <footer>
                 制作者の名前とかを書く
                 可能ならURLで飛べるようにする
+                TOPの名前をURLにして飛べるように
             </footer>
-        </div>>
+        </div>
     </body>
 </html>

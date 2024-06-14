@@ -4,66 +4,84 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <script>
-            //指定したページを読み込んで表示させる処理
-            function loadPage(page) {
-                document.getElementById('contentFrame').src = page; // 親フレームの関数を呼び出す
-            }
-            // サイドバーを読み込む処理
-            function loadSidebar() {
-                document.getElementById('sidebar').innerHTML 
-                = `<a href="#">hello!</a>`;
-            }
-
-            // ページロード時にサイドバーを読み込む
-                  window.onload = function() {
-                loadSidebar();
-            }
-            // // 親フレームにloadPage関数を登録
-            // window.loadPage = loadPage;
-        </script>
     </head>
     <body>
+        <header>
+            <h1 class="header-name"> 東洋ワーク株式会社 </h1>
+            <ul class="header-menu">
+                <li class="menu-name"><a href="C:\manners-main\html\main.html">トップ画面へ</a></li>
+                <li class="menu-name"><a href="C:\manners-main\html\question.html">あいさつについて</a></li>
+                <li class="menu-name"><a href="C:\manners-main\html\self-introduction.html">敬語について</a></li>
+                <li class="menu-name"><a href="C:\manners-main\html\study.html">面接について</a></li>
+            </ul>
+        </header>
         <div class="main">
-            <!-- サイドバーの処理 
-            <div class="side-menu" id="sidebar">
-                <ul>
-                    <li><a href="#" onclick="loadPage('top.html')">TOPへ</a></li>
-                    <li><a href="#" onclick="loadPage('question.html')">Question</a></li>
-                    <li><a href="#" onclick="loadPage('self-introduction.html')">Self Introduction</a></li>
-                    <li><a href="#" onclick="loadPage('study.html')">Study</a></li>     
-                </ul>
-                <iframe id="contentFrame" width="100%" height="100%" src="" frameborder="0"></iframe>
-            </div> -->
-
-            <!-- 以下追加修正 -->
             <div class = "main-page">
-                <div class = "title">・研修生一覧</div>
+                <div class = "title">・研修生</div>
                 <div class = "images">
                     <div class = "members">
                         <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <div class = "member">
+                            <div class = "member-name">名前：飯島 翔</div>
+                            <div class = "member-text">一言：CSS作成を担当しました</div>
+                        </div>
                     </div>
                     <div class = "members">
                         <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
                     </div>
                     <div class = "members">
                         <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
                     </div>
                     <div class = "members">
                         <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
                     </div>
                     <div class = "members">
                         <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
                     </div>
-                </div>
-                <div class = "title">・目次</div>
-                <div class = "contents">
-
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
+                    </div>
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
+                    </div>
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
+                    </div>
+                    <div class = "members">
+                        <img src = "images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class = "member-name">名前</div>
+                            <div class = "member-text">一言：あああああああああああ</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

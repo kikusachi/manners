@@ -1,44 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- 文字列やCSSの読み込み -->
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <!-- JavaScript関係の処理 -->
-        <script>
-            //指定したページを読み込んで表示させる処理
-            function loadPage(page) {
-                parent.loadPage(page); // 親フレームの関数を呼び出す
-            }
-            // サイドバーを読み込む処理
-            function loadSidebar() {
-                fetch('sidebar.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('sidebar').innerHTML = data;
-                    });
-            }
-            // ページロード時にサイドバーを読み込む
-            window.onload = function() {
-                loadSidebar();
-            }
-        </script>
     </head>
-
     <body>
         <div class="main">
-            <!-- サイドバーの処理
-            <div class="side-menu" id="sidebar">
-                <ul>
-                    <li><a href="#" onclick="loadPage('top.html')">TOPへ</a></li>
-                    <li><a href="#" onclick="loadPage('question.html')">Question</a></li>
-                    <li><a href="#" onclick="loadPage('self-introduction.html')">Self Introduction</a></li>
-                    <li><a href="#" onclick="loadPage('study.html')">Study</a></li>        
+            <header>
+                <h1 class="header-name"> 東洋ワーク株式会社 </h1>
+                <ul class="header-menu">
+                    <li class="menu-name"><a href="C:\manners-main\html\main.html">トップ画面へ</a></li>
+                    <li class="menu-name"><a href="C:\manners-main\html\top.html">研修生一覧へ</a></li>
+                    <li class="menu-name"><a href="C:\manners-main\html\question.html">挨拶について</a></li>
+                    <li class="menu-name"><a href="C:\manners-main\html\self-introduction.html">敬語について</a></li>
                 </ul>
-            </div> -->
-
-            <!-- 以下追加修正 -->
+            </header>
             <div class = "main-page">
                 <div class = "title">・面接について</div>
                 <div class = "shows">

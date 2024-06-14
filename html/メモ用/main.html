@@ -5,57 +5,30 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <title> 仮タイトル：東洋ワーク株式会社 </title>
-        <script>
-            //指定したページを読み込んで表示させる処理
-            function loadPage(page) {
-                document.getElementById('contentFrame').src = page;
-            }
-
-            // サイドバーを読み込む処理
-            function loadSidebar() {
-                    document.getElementById('sidebar').innerHTML = `
-                    <ul>
-                        <li><a href="#" onclick="loadPage('top.html')">トップ画面へ</a></li>
-                        <li><a href="#" onclick="loadPage('question.html')">クイズ画面へ</a></li>
-                        <li><a href="#" onclick="loadPage('self-introduction.html')">自己紹介画面へ</a></li>
-                        <li><a href="#" onclick="loadPage('study.html')">勉強画面へ</a></li>
-                    </ul>
-                `;
-            }
-            // ページロード時にサイドバーを読み込む
-            window.onload = function() {
-                loadSidebar();
-            }
-            // 親フレームにloadPage関数を登録
-            window.loadPage = loadPage;
-        </script>
     </head>
-
     <body>
         <div class="main">
             <header>
-                <h1 class="header-name"> 東洋ワーク株式会社 </h1>
-                
-                <div class="header-menu">
-                    <!-- どの画面でも共通してトップ画面やクイズ画面に移動できるようにしている -->
-                    <a href="#" onclick="loadPage('top.html')"  class="menu-name">トップ画面へ</a>
-                    <a href="#" onclick="loadPage('question.html')"  class="menu-name">あいさつについて</a>
-                    <a href="#" onclick="loadPage('self-introduction.html')"  class="menu-name">敬語について</a>
-                    <a href="#" onclick="loadPage('study.html')"  class="menu-name">面接について</a>
-                </div>
+                <h1 class="header-name">東洋ワーク株式会社</h1>
+                <ul class="header-menu">
+                    <li class="menu-name"><a href="C:\manners-main\html\top.html">研修生一覧へ</a></li>
+                    <li class="menu-name"><a href="C:\manners-main\html\question.html">挨拶について</a></li>
+                    <li class="menu-name"><a href="C:\manners-main\html\self-introduction.html">敬語について</a></li>
+                    <li class="menu-name"><a href="C:\manners-main\html\study.html">面接について</a></li>
+                </ul>
             </header>
 
             <div class="main">                
-                <!-- サイドバーのコンテナ:サイドバーを表示させる処理だが、非表示にCSSでしている
-                <div id="sidebar" class="hidden"></div>-->
-
-                <iframe id="contentFrame" src="top.html" width="100%" height="100%"></iframe>
+                <div class = "main-page">
+                    <div class = "title">・目次</div>
+                    <div class = "contents">
+                        <div class = "content">あいさつについて</div>
+                        <div class = "content">敬語について</div>
+                        <div class = "content">面接について</div>
+                    </div>
+                </div>
             </div>
-
-            <footer>
-                制作者の名前とかを書く
-                可能ならURLで飛べるようにする
-            </footer>
+            <footer></footer>
         </div>
     </body>
 </html>

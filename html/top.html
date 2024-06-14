@@ -4,37 +4,41 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+
         <script>
-            //指定したページを読み込んで表示させる処理
-            function loadPage(page) {
-                document.getElementById('contentFrame').src = page; // 親フレームの関数を呼び出す
-            }
-            // サイドバーを読み込む処理
-            function loadSidebar() {
-                // `<a href="top.html">トップ画面へ!</a>`のように飛ばしたいファイル名・リンクにしたい文字列などを指定する
-                document.getElementById('sidebar').innerHTML 
-                = `
-                <ul>
-                    <li><a href="study.html">勉強画面へ!</a></li>
-                    <li><a href="self-introduction.html">自己紹介画面へ!</a></li>
-                    <li><a href="question.html">クイズ画面へ!</a></li>
-                </ul>
+            // ヘッダーを読み込む処理
+            function loadheader() {
+                //headerがHTMLで表示させる際に呼び出すidを記載・''の中に実行させたい処理を記載
+                    document.getElementById('header').innerHTML = `
+                    <h1 class="header-name"> 東洋ワーク株式会社 </h1>
+                    <div class="header-menu">
+                        <!-- どの画面でも共通してトップ画面やクイズ画面に移動できるようにしている -->
+                        <a href="top.html"  class="menu-name">作者紹介</a>
+                        <a href="question.html"  class="menu-name">挨拶について</a>
+                        <a href="self-introduction.html"  class="menu-name">敬語について</a>
+                        <a href="study.html"  class="menu-name">面接について</a>
+                    </div>
                 `;
             }
 
-            // ページロード時にサイドバーを読み込む
+            // フッターを読み込む処理
+            function loadfooter() {
+                //headerがHTMLで表示させる際に呼び出すidを記載・''の中に実行させたい処理を記載
+                    document.getElementById('footer').innerHTML = ``;
+            }
+
+            // ページロード時に上記関数を読み込む
             window.onload = function() {
-                loadSidebar();
+                loadheader();
+                loadfooter();
             }
         </script>
+        
     </head>
     <body>
         <div class="main">
-            <!-- サイドバーの処理 -->        
-            <!--トップ画面class="side-menu" ←サイドバーを表示状態に変更する場合は入れる-->
-            <div  id="sidebar" class="hidden">
-                <iframe id="contentFrame" width="100%" height="100%" src="" frameborder="0"></iframe>
-            </div>
+            <!-- ヘッダーの処理 -->
+            <header id="header" ></header>
 
             <!-- 以下中身を編集する -->
             <div class = "main-page">
@@ -66,6 +70,9 @@
 
                 </div>
             </div>
+
+            <!-- フッターの処理 -->
+            <header id="footer" ></header>
         </div>
     </body>
 </html>
