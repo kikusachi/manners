@@ -4,75 +4,59 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-
-        <script>
-            // ヘッダーを読み込む処理
-            function loadheader() {
-                //headerがHTMLで表示させる際に呼び出すidを記載・''の中に実行させたい処理を記載
-                    document.getElementById('header').innerHTML = `
-                    <h1 class="header-name"> 東洋ワーク株式会社 </h1>
-                    <div class="header-menu">
-                        <!-- どの画面でも共通してトップ画面やクイズ画面に移動できるようにしている -->
-                        <a href="top.html"  class="menu-name">作者紹介</a>
-                        <a href="question.html"  class="menu-name">挨拶について</a>
-                        <a href="self-introduction.html"  class="menu-name">敬語について</a>
-                        <a href="study.html"  class="menu-name">面接について</a>
-                    </div>
-                `;
-            }
-
-            // フッターを読み込む処理
-            function loadfooter() {
-                //headerがHTMLで表示させる際に呼び出すidを記載・''の中に実行させたい処理を記載
-                    document.getElementById('footer').innerHTML = ``;
-            }
-
-            // ページロード時に上記関数を読み込む
-            window.onload = function() {
-                loadheader();
-                loadfooter();
-            }
-        </script>
-        
+        <title> 仮タイトル：東洋ワーク株式会社 </title>
     </head>
     <body>
+        <header>
+            <h1 class="header-name"> 東洋ワーク株式会社 </h1>
+            <ul class="header-menu">
+                <li class="menu-name"><a href="main.html">トップ</a></li>
+                <li class="menu-name"><a href="question.html">あいさつについて</a></li>
+                <li class="menu-name"><a href="self-introduction.html">敬語について</a></li>
+                <li class="menu-name"><a href="study.html">面接・服装について</a></li>
+            </ul>
+        </header>
         <div class="main">
-            <!-- ヘッダーの処理 -->
-            <header id="header" ></header>
-
-            <!-- 以下中身を編集する -->
             <div class = "main-page">
-                <div class = "title">・研修生一覧</div>
+                <div class = "title">------------ 研修生 ------------</div>
                 <div class = "images">
                     <div class = "members">
-                        <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <img src = "C:\manners-main\images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class = "member-name">名前：飯島 翔</div>
+                            <div class = "member-text">一言：WebアプリケーションのCSS作成を担当しました</div>
+                        </div>
                     </div>
                     <div class = "members">
-                        <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <img src = "C:\manners-main\images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class = "member-name">名前：湯橋 奏哉</div>
+                            <div class = "member-text">一言：「敬語」についてのまとめの記事を作成しました</div>
+                        </div>
                     </div>
                     <div class = "members">
-                        <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <img src = "C:\manners-main\images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class="member-name">名前：菊池 祥衣</div>
+                            <div class="member-text">一言：HTMLなどを使用し大枠を作成しました</div>
+                        </div>
                     </div>
                     <div class = "members">
-                        <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <img src = "C:\manners-main\images\study_man.png" class = "image">
+                        <div class = "member">
+                            <div class="member-name">名前：三森 大輝</div>
+                            <div class="member-text">一言：文章の作成とコードの入力</div>
+                        </div>
                     </div>
                     <div class = "members">
-                        <img src = "images\study_man.png" class = "image">
-                        <div class = "member-name">名前</div>
+                        <img src = "C:\manners-main\images\stud_woman.png" class = "image">
+                        <div class = "member">
+                            <div class="member-name">名前：古本 英雅</div>
+                            <div class = "member-text">一言：文章を考えました</div>
+                        </div>
                     </div>
-                </div>
-                <div class = "title">・目次</div>
-                <div class = "contents">
-
                 </div>
             </div>
-
-            <!-- フッターの処理 -->
-            <header id="footer" ></header>
         </div>
     </body>
 </html>

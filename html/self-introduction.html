@@ -4,57 +4,94 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <script>
-            //指定したページを読み込んで表示させる処理
-            function loadPage(page) {
-                document.getElementById('contentFrame').src = page; // 親フレームの関数を呼び出す
-            }
-            // サイドバーを読み込む処理
-            function loadSidebar() {
-                // `<a href="top.html">トップ画面へ!</a>`のように飛ばしたいファイル名・リンクにしたい文字列などを指定する
-                document.getElementById('sidebar').innerHTML 
-                = `
-                <a href="top.html">メイン(トップ)画面へ!</a><br/>
-                `;
-            }
-            // ページロード時にサイドバーを読み込む
-            window.onload = function() {
-                loadSidebar();
-            }
-        </script>
+        <title> 仮タイトル：東洋ワーク株式会社 </title>
     </head>
     <body>
         <div class="main">
-            <!-- サイドバーの処理 作者一覧画面 side-menu-->
-            <div class="hidden" id="sidebar">
-                <iframe id="contentFrame" width="100%" height="100%" src="" frameborder="0"></iframe>
-            </div>
-
-            <!-- 以下中身を編集する -->
+            <header>
+                <h1 class="header-name"> 東洋ワーク株式会社 </h1>
+                <ul class="header-menu">
+                    <li class="menu-name"><a href="main.html">トップ</a></li>
+                    <li class="menu-name"><a href="top.html">研修生一覧</a></li>
+                    <li class="menu-name"><a href="question.html">挨拶について</a></li>
+                    <li class="menu-name"><a href="study.html">面接・服装について</a></li>
+                </ul>
+            </header>
             <div class = "main-page">
-                <div class = "title">・敬語について</div>
+                <div class = "title">------------ 敬語について ------------</div>
                 <div class = "shows">
                     <div class = "show">
-                        <div class = "show-title">敬語</div>
+                        <div class = "show-title">敬語の種類</div>
                         <div class = "show-text">
-                            <div class="text">敬語について</div>
+                            <div class="text">敬語は大きくわけると「尊敬語」「謙譲語」「丁寧語」の3種類がある。
+                                <br>尊敬語は動作を行っていたり、その状態の人を高めることで、目上の人
+                                への敬意や尊敬をあらわすもの。つまり「相手が〇〇している」という
+                                ときに使用する。<br>謙譲語と間違う人が多いかもしれないが、謙譲語
+                                は主語が自分のとき、つまり「自分が〇〇している」というときに使うもの。
+                                <br>謙譲語は自分がへりくだることで相対的に相手を立てる敬語。
+                                そのため「自分が〇〇している」というときに使用する。<br>先ほど紹介した
+                                尊敬語は相手を直接的に立てる表現であり、主語が相手のときに
+                                「相手が〇〇している」と使うのが大きな違い。
+                                <br>丁寧語は丁寧な言葉を使うことで、聞き手への敬意を示す言葉のこと。
+                                語尾に「です」「ます」「ございます」などをつけるのが特徴。
+                            </div>
                         </div>
                     </div>
                     <div class = "show">
-                        <div class = "show-title">敬語</div>
+                        <div class = "show-title">よく使う敬語</div>
                         <div class = "show-text">
-                            <div class="text">敬語について</div>
+                            <div class="text">敬語の中でも普段からよく使用する敬語がある。
+                                <br>挨拶系で使用するものは「お世話になっております。」のように
+                                既に面識のある方に対して使用することが多いもの。<br>「ご教示ください。」
+                                のようにやり方や手段など教えてもらうようにお願いする意味で使用するもの。
+                                <br>「ご無沙汰しております。」久しぶりに連絡をとる際、目上の人や取引先に使用するもの。
+                                <br>今紹介したもの以外にも人によっては良く使用するものもある。
+                                <br>動詞には一つの動詞に対して「尊敬語」「謙譲語」「丁寧語」の3つの言い方があり
+                                現状に合わせて使い分けるようにする。
+                            </div>
                         </div>
                     </div>
                     <div class = "show">
-                        <div class = "show-title">敬語</div>
+                        <div class = "show-title">敬語の間違い</div>
                         <div class = "show-text">
-                            <div class="text">敬語について</div>
+                            <div class="text">敬語を使用する上で間違った使い方をしてしまうことがある。
+                                その中でも最も多い間違いが「二重敬語」というもの。
+                                <br>これは言葉の通りすでに敬語である言葉に別の敬語を重ねていることを指す。
+                                <br>例として「おっしゃられる通りだと思います」という文がある。
+                                <br>一見おかしくないように思われるが、おっしゃるだけで尊敬語なので、「られる」
+                                をつけると二重敬語になる。同様に、おっしゃられました、ではなく、
+                                おっしゃいました、が正しい表現になる。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show">
+                        <div class="show-title">状況に応じた敬意の表現</div>
+                        <div class="show-text">
+                            <div class="text">
+                                状況に応じた敬意の表現や敬語の使い方は、ビジネスや日常生活において重要です。<br>
+                                例えば、上司や客に対しては敬意を示すために丁寧語を用いることが一般的です。<br>
+                                これには、言葉遣いや口調、または物言いの穏やかさが含まれます。また、社内での同僚や部下に対しても、
+                                相手の立場や状況に応じた適切な敬語を使うことが求められます。<br>例えば、敬語を使いつつも、過剰な堅苦しさを避け、
+                                親しみや信頼を感じさせるコミュニケーションスタイルが望まれます。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show">
+                        <div class="show-title">自然な会話の流れを保つ</div>
+                        <div class="show-text">
+                            <div class="text">
+                                まず、相手の話に注意深く耳を傾け、興味を持って返答することが大切です。適度な疑問や共感を表現し、対話に積極的に参加します。<br>
+    
+                                また、自分の意見を率直に述べつつも、相手の意見や感情を尊重します。互いの意見を交換し合い、共感し合う姿勢が良い対話の基盤です。<br>
+    
+                                非言語コミュニケーションも大切で、言葉遣いや表情、声のトーンで会話の意図を明確に伝えます。<br>
+    
+                                適度な休憩や沈黙を設けることも重要で、対話のリズムを保ちながら相手との自然なコミュニケーションを築きます。<br>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </body>
 </html>

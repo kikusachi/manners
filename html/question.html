@@ -4,53 +4,51 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <script>
-            //指定したページを読み込んで表示させる処理
-            function loadPage(page) {
-                document.getElementById('contentFrame').src = page; // 親フレームの関数を呼び出す
-            }
-            // サイドバーを読み込む処理
-            function loadSidebar() {
-                // 飛ばしたいファイル名・リンクにしたい文字列などを指定
-                document.getElementById('sidebar').innerHTML 
-                = `
-                <a href="top.html">メイン(トップ)画面へ!</a><br/>
-                `;
-            }
-            // ページロード時にサイドバーを読み込む
-            window.onload = function() {
-                loadSidebar();
-            }
-        </script>
+        <title> 仮タイトル：東洋ワーク株式会社 </title>
     </head>
-
     <body>
         <div class="main">
-            <!-- サイドバーの処理 クイズ画面 side-menu-->
-            <div class="hidden" id="sidebar">
-                <iframe id="contentFrame" width="100%" height="100%" src="" frameborder="0"></iframe>
-            </div>
-
-            <!-- 以下中身を編集する -->
+            <header>
+                <h1 class="header-name"> 東洋ワーク株式会社 </h1>
+                <ul class="header-menu">
+                    <li class="menu-name"><a href="main.html">トップ</a></li>
+                    <li class="menu-name"><a href="top.html">研修生一覧</a></li>
+                    <li class="menu-name"><a href="self-introduction.html">敬語について</a></li>
+                    <li class="menu-name"><a href="study.html">面接・服装について</a></li>
+                </ul>
+            </header>
             <div class = "main-page">
-                <div class = "title">・あいさつについて</div>
+                <div class = "title">------------ 挨拶について ------------</div>
                 <div class = "shows">
-                    <div class = "show">
-                        <div class = "show-title">あいさつ</div>
-                        <div class = "show-text">
-                            <div class="text">あいさつについて</div>
+                    <div class="show">
+                        <div class="show-title">相手との距離感に応じた選択</div>
+                        <div class="show-text">
+                            <div class="text">
+                                相手との距離感に応じたあいさつは、円滑なコミュニケーションの重要な要素です。例えば、初対面の場合やビジネスシーンでは、丁寧な挨拶を心がけます。一方で、親しい間柄や日常的な場面では、自然で気軽な挨拶が適切です。相手の文化や環境に敏感になり、その場に適した形で挨拶を行います。挨拶の際には、相手に敬意を払い、同時に友好的な雰囲気を作ることを意識します。
+                            </div>
                         </div>
                     </div>
-                    <div class = "show">
-                        <div class = "show-title">あいさつ</div>
-                        <div class = "show-text">
-                            <div class="text">あいさつについて</div>
+                    <div class="show">
+                        <div class="show-title">明るく、笑顔で</div>
+                        <div class="show-text">
+                            <div class="text">
+                                人間関係を円滑にし、ポジティブな雰囲気を作るための重要な手段です。朝の挨拶では、職場や学校で「おはようございます！」と声をかけることで、一日の始まりを明るく迎えます。初対面の場面では、「はじめまして、〇〇と申します。よろしくお願いします！」と笑顔で相手に親しみを示します。このような積極的なアプローチは、新たな関係を築くための第一歩となります。
+    
+                                また、友人や同僚との日常的な交流でも、笑顔で気軽に挨拶することが大切です。「こんにちは！」や「やあ！」と声をかけることで、日常のストレスや緊張を和らげ、ポジティブなコミュニケーションの土台を築くことができます。笑顔は相手に対する尊重と親近感を示し、良好な人間関係の基盤を作るのに役立ちます。
+                            </div>
                         </div>
                     </div>
-                    <div class = "show">
-                        <div class = "show-title">あいさつ</div>
-                        <div class = "show-text">
-                            <div class="text">あいさつについて</div>
+                    <div class="show">
+                        <div class="show-title">状況や時間帯に合わせた適切な言葉遣い</div>
+                        <div class="show-text">
+                            <div class="text">相手との関係性や場面によって異なります。
+                                朝の挨拶では、「おはようございます！」や「おはようございます、今日もいい天気ですね」と親しみやすく明るい言葉を使います。
+                                昼間や午後には、「こんにちは！」や「こんにちは、お元気ですか？」と元気な声で挨拶します。
+                                夜や日が落ちた後に会う場合は、「こんばんは！」や「こんばんは、お疲れさまです」と少し落ち着いた調子で挨拶します。
+                                特にビジネスシーンでは、丁寧な言葉遣いと共に、相手の立場や状況に敏感に対応します。例えば、
+                                初対面の取引先との会合では、礼儀正しさを保ちながらも親しみやすさも忘れずに、相手との良好な関係を築くために心掛けます。
+                                相手の文化や慣習にも配慮しながら、適切な言葉遣いでのあいさつは、信頼関係を深めるうえで重要な役割を果たします。
+                            </div>
                         </div>
                     </div>
                 </div>
