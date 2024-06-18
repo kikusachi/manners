@@ -153,3 +153,12 @@ ul {
 {
     display: none;
 }
+
+.main-title-q
+{
+    display: flex;
+    justify-content: center;
+}
+.send-ans-q
+{
+}

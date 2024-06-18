@@ -2,28 +2,46 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>マナーなどの確認問題</h1>
-        <h2>クイズ：次の中から正しい答えを選択してください</h2>
+        <div class="main">
+            <header>
+                <h1 class="header-name">東洋ワーク株式会社</h1>
+                <ul class="header-menu">
+                    <li class="menu-name"><a href="list_of_authors.html">研修生一覧</a></li>
+                    <li class="menu-name"><a href="greeting.html">挨拶について</a></li>
+                    <li class="menu-name"><a href="honorific.html">敬語について</a></li>
+                    <li class="menu-name"><a href="interview.html">面接・服装について</a></li>
+                </ul>
+            </header>
 
-        <!-- 入力された情報をphpファイルに送信-->
-        <form action="http://localhost/question.php">
-            <!-- チェックボックス -->
-            <input type="checkbox" name="hello">選択
-            <!-- ラジオボタン -->
-            <input type="radio" name="question1" value="a">ボタン
-            <input type="radio" name="question1" value="b">button
-            <input type="radio" name="question1" value="c">ぼたん
+            <h1 class="main-title-q">マナーなどの確認問題</h1>
+            <h2>クイズ：次の中から正しい答えを選択してください</h2>
 
-            <!-- 送信ボタン -->
-            <input type="submit" value="送信">
+            <!-- 入力された情報をphpファイルに送信 postメソッドで指定ファイルにデータ送信-->
+            <form action="http://localhost/question.php" method="post">
+                <!-- チェックボックス -->
+                <input type="checkbox" name="hello">選択
+                <!-- ラジオボタン -->
+                <br/><input type="radio" name="question1" value="a">ボタン
+                <br/><input type="radio" name="question1" value="b">button
+                <br/><input type="radio" name="question1" value="c">ぼたん
 
-            <!-- 相談したいこと
-             1,クイズは〇×問題だけでいいのか
-             2,出題する問題はこちらで決めるのか
-             3,問題数はいくつがいいのか
-            -->
-        </form>
+                <!-- 送信ボタン -->
+                <br/><br/><input type="submit" value="送信" class="send-ans-q">
+
+                <!-- 相談したいこと
+                me:明日は資料作成と発表
+                1,クイズは〇×問題だけでいいのか
+                →各自の判断に任せる:両方あってもいいかも：〇×は〇×で、三択なら三択でまとめてた方がいい
+                2,出題する問題はこちらで決めるのか
+                →自分でいくつか考える・明日共有・相談する
+                3,問題数はいくつがいいのか・自分的には各項目に最低3つでいいかな
+                →ひとり３種類作成→問題の形式・採用を決定する：敬語をメインに３つ担当する
+                -->
+            </form>
+        </div>
     </body>
 </html>
