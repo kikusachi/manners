@@ -5,12 +5,25 @@
     </head>
     <body>
         <h1>マナーなどの確認問題</h1>
+        <h2>クイズ：次の中から正しい答えを選択してください</h2>
 
-        <form>
+        <!-- 入力された情報をphpファイルに送信-->
+        <form action="http://localhost/question.php">
             <!-- チェックボックス -->
             <input type="checkbox" name="hello">選択
             <!-- ラジオボタン -->
-            <input type="radio">ボタン
+            <input type="radio" name="question1" value="a">ボタン
+            <input type="radio" name="question1" value="b">button
+            <input type="radio" name="question1" value="c">ぼたん
+
+            <!-- 送信ボタン -->
+            <input type="submit" value="送信">
+
+            <!-- 相談したいこと
+             1,クイズは〇×問題だけでいいのか
+             2,出題する問題はこちらで決めるのか
+             3,問題数はいくつがいいのか
+            -->
         </form>
     </body>
 </html>
