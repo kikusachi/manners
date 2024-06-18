@@ -18,28 +18,39 @@
             </header>
 
             <h1 class="main-title-q">マナーなどの確認問題</h1>
-            <h2>クイズ：次の中から正しい答えを選択してください</h2>
 
             <!-- 入力された情報をphpファイルに送信 postメソッドで指定ファイルにデータ送信-->
             <form action="http://localhost/question.php" method="post">
                 <!-- チェックボックス -->
-                <input type="checkbox" name="hello">選択
-                <!-- ラジオボタン -->
-                <br/><input type="radio" name="question1" value="a">ボタン
-                <br/><input type="radio" name="question1" value="b">button
-                <br/><input type="radio" name="question1" value="c">ぼたん
+                <input type="checkbox" name="hello">選択<br/><br/>
+
+                <div class="question1">
+                    <h2>クイズ：次の中から正しい答えを選択してください</h2>
+                    <!-- ラジオボタン -->
+                    <br/><input type="radio" name="question1" value="a" class="answer-q">ボタン
+                    <br/><input type="radio" name="question1" value="b">button
+                    <br/><input type="radio" name="question1" value="c">ぼたん
+                </div>
+
+                <div>
+                    <h2>question2</h2>
+                    <br/><input type="radio" name="question2" value="a">ボタン
+                    <br/><input type="radio" name="question2" value="b">button
+                    <br/><input type="radio" name="question2" value="c">ぼたん
+                </div>
 
                 <!-- 送信ボタン -->
                 <br/><br/><input type="submit" value="送信" class="send-ans-q">
 
                 <!-- 相談したいこと
-                me:明日は資料作成と発表
+                me:明日は挨拶や敬語などの資料作成と発表
                 1,クイズは〇×問題だけでいいのか
                 →各自の判断に任せる:両方あってもいいかも：〇×は〇×で、三択なら三択でまとめてた方がいい
                 2,出題する問題はこちらで決めるのか
                 →自分でいくつか考える・明日共有・相談する
                 3,問題数はいくつがいいのか・自分的には各項目に最低3つでいいかな
                 →ひとり３種類作成→問題の形式・採用を決定する：敬語をメインに３つ担当する
+                me:成果物の発表担当
                 -->
             </form>
         </div>

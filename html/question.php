@@ -29,12 +29,3 @@
         echo "<h2>あなたの得点: $score / " . count($correct_answers) . "</h2>";
     }
 ?>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        試しに表示させてみる
-    </body>
-</html>

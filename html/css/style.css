@@ -159,6 +159,12 @@ ul {
     display: flex;
     justify-content: center;
 }
+
+.answer-q
+{
+    font-size: 50px;
+}
+
 .send-ans-q
 {
 }
