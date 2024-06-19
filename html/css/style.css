@@ -160,11 +160,19 @@ ul {
     justify-content: center;
 }
 
-.answer-q
+.question-title
 {
-    font-size: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-.send-ans-q
+.radio_text
 {
+    position: relative;
+    font-size: 25px;
+}
+
+.send_q
+{
+
 }

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="main">
+        <div class="main-page">
             <header>
                 <h1 class="header-name">東洋ワーク株式会社</h1>
                 <ul class="header-menu">
@@ -21,27 +21,53 @@
             <h4 class="main-title-q">クイズ：次の中から正しい答えを選択してください</h4>
 
             <!-- 入力された情報をphpファイルに送信 postメソッドで指定ファイルにデータ送信-->
-            <form action="http://localhost/question.php" method="post">
+            <form action="http://localhost/manners/html/question.php" method="post">
                 <!-- チェックボックス -->
                 <input type="checkbox" name="hello">選択<br/><br/>
 
+                <!-- 問題１ -->
                 <div class="question1">
-                    <h2>Question1</h2>
+                    <h2 class="question-title">Question1</h2>
                     <!-- ラジオボタン -->
-                    <br/><input type="radio" name="question1" value="a" style="transform: scale(1.5);" class="answer-q"> ボタン
-                    <br/><input type="radio" name="question1" value="b" style="transform: scale(1.5);"> button
-                    <br/><input type="radio" name="question1" value="c" style="transform: scale(1.5);"> ぼたん
+                    <label class="choices">
+                        <br/>
+                        <input class="radio__btn" type="radio" name="question1" value="a" style="transform: scale(1.5);" >
+                        <span class="radio_text">ボタン</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question1" value="b" style="transform: scale(1.5);">
+                        <span class="radio_text">button</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question1" value="c" style="transform: scale(1.5);">
+                        <span class="radio_text">ぼたん</span>
+                    </label>
                 </div>
 
-                <div>
-                    <h2>question2</h2>
-                    <br/><input type="radio" name="question2" value="a" style="transform: scale(1.5);"> ボタン
-                    <br/><input type="radio" name="question2" value="b" style="transform: scale(1.5);"> button
-                    <br/><input type="radio" name="question2" value="c" style="transform: scale(1.5);"> ぼたん
+                <!-- 問題２ -->
+                <div class="question2">
+                    <h2 class="question-title">Question2</h2>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question2" value="a" style="transform: scale(1.5);">
+                        <span class="radio_text">ボタン</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question2" value="b" style="transform: scale(1.5);">
+                        <span class="radio_text">button</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question2" value="c" style="transform: scale(1.5);">
+                        <span class="radio_text">ぼたん</span>
+                    </label>
                 </div>
 
                 <!-- 送信ボタン -->
-                <br/><br/><input type="submit" value="送信" class="send-ans-q">
+                <br/><br/><input type="submit" class="send_q" value="送信" >
 
                 <!-- 相談したいこと
                 me:明日は挨拶や敬語などの資料作成と発表

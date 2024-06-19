@@ -24,9 +24,6 @@
                 $score++;
             }
         }
-
-        // 得点を表示
-        echo "<h2>あなたの得点: $score / " . count($correct_answers) . "</h2>";
     }
 ?>
 
@@ -49,20 +46,19 @@
                 </ul>
             </header>
 
-            <h1 class="main-title-q">マナーなどの確認問題</h1>
+            <h2 class="main-title-q">マナーなどの確認問題</h2>
             <h4 class="main-title-q"></h4>
 
             <!-- 入力された情報をphpファイルに送信 postメソッドで指定ファイルにデータ送信-->
-            <form action="http://localhost/question.php" method="post">
                 <!-- チェックボックス -->
                 <input type="checkbox" name="hello">選択<br/><br/>
 
                 <div class="question1">
-                    <h2>Question1</h2>
+                    <h2 class="question-title">Question1</h2>
                     <!-- ラジオボタン -->
-                    <br/><input type="radio" name="question1" value="a" style="transform: scale(1.5);" class="answer-q"> ボタン
-                    <br/><input type="radio" name="question1" value="b" style="transform: scale(1.5);"> button
-                    <br/><input type="radio" name="question1" value="c" style="transform: scale(1.5);"> ぼたん
+                    <br/><input type="radio" name="question1" value="a" style="transform: scale(2.0);" class="answer-q"> ボタン
+                    <br/><input type="radio" name="question1" value="b" style="transform: scale(2.0);"> button
+                    <br/><input type="radio" name="question1" value="c" style="transform: scale(2.0);"> ぼたん
                 </div>
 
                 <div>
@@ -72,8 +68,10 @@
                     <br/><input type="radio" name="question2" value="c" style="transform: scale(1.5);"> ぼたん
                 </div>
 
-                <!-- 送信ボタン -->
-                <br/><br/><input type="submit" value="送信" class="send-ans-q">
+                <?php
+                    // 得点をPHPで表示
+                    echo "<h2>あなたの得点: $score / " . count($correct_answers) . "</h2>";
+                ?>
 
                 <!-- 相談したいこと
                 me:明日は挨拶や敬語などの資料作成と発表
@@ -89,7 +87,6 @@
                 ・社外の人から電話で頼まれごとをしたが自分の部署が担当する事案ではないと伝える
                 ・応接室に座る際の上座・下座等席次のルール←イラストを用意して1～6で３番目に席次が高いのは・・・のようにしたらいいのでは？
                 -->
-            </form>
         </div>
     </body>
 </html>
