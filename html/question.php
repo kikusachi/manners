@@ -7,7 +7,11 @@
     //正解の答え(仮)
     $correct_answers = array(
         "question1" => "b", // 問題1の正解は "b"
-        "question2" => "a"  // 問題2の正解は "a"
+        "question2" => "a",  // 問題2の正解は "a"
+        "question3" => "b", // 問題3の正解は "b"
+        "question4" => "a",  // 問題4の正解は "a"
+        "question5" => "c",  // 問題5の正解は "c"
+        "question6" => "a"  // 問題6の正解は "a"
     );
 
     // フォームが送信された場合
@@ -15,7 +19,11 @@
         // 各質問に対するユーザーの回答を取得
         $user_answers = array(
             "question1" => $_POST["question1"],
-            "question2" => $_POST["question2"]
+            "question2" => $_POST["question2"],
+            "question3" => $_POST["question3"],
+            "question4" => $_POST["question4"],
+            "question5" => $_POST["question5"],
+            "question6" => $_POST["question6"],
         );
 
         // ユーザーの回答と正解を比較し、得点を計算
@@ -46,47 +54,14 @@
                 </ul>
             </header>
 
-            <h2 class="main-title-q">マナーなどの確認問題</h2>
+            <h1 class="main-title-q">マナーなどの確認問題</h1>
             <h4 class="main-title-q"></h4>
 
-            <!-- 入力された情報をphpファイルに送信 postメソッドで指定ファイルにデータ送信-->
-                <!-- チェックボックス -->
-                <input type="checkbox" name="hello">選択<br/><br/>
-
-                <div class="question1">
-                    <h2 class="question-title">Question1</h2>
-                    <!-- ラジオボタン -->
-                    <br/><input type="radio" name="question1" value="a" style="transform: scale(2.0);" class="answer-q"> ボタン
-                    <br/><input type="radio" name="question1" value="b" style="transform: scale(2.0);"> button
-                    <br/><input type="radio" name="question1" value="c" style="transform: scale(2.0);"> ぼたん
-                </div>
-
-                <div>
-                    <h2>question2</h2>
-                    <br/><input type="radio" name="question2" value="a" style="transform: scale(1.5);"> ボタン
-                    <br/><input type="radio" name="question2" value="b" style="transform: scale(1.5);"> button
-                    <br/><input type="radio" name="question2" value="c" style="transform: scale(1.5);"> ぼたん
-                </div>
-
-                <?php
-                    // 得点をPHPで表示
-                    echo "<h2>あなたの得点: $score / " . count($correct_answers) . "</h2>";
-                ?>
-
-                <!-- 相談したいこと
-                me:明日は挨拶や敬語などの資料作成と発表
-                ＝》席次についてまとめる
-                1,クイズは〇×問題だけでいいのか
-                →各自の判断に任せる:両方あってもいいかも：〇×は〇×で、三択なら三択でまとめてた方がいい
-                2,出題する問題はこちらで決めるのか
-                →自分でいくつか考える・明日共有・相談する
-                3,問題数はいくつがいいのか・自分的には各項目に最低3つでいいかな
-                →ひとり３種類作成→問題の形式・採用を決定する：敬語をメインに３つ担当する
-                me:成果物の発表担当
-                ・部長に「課長の田中を呼んできてくれないか？」頼まれたと伝えるときの敬語
-                ・社外の人から電話で頼まれごとをしたが自分の部署が担当する事案ではないと伝える
-                ・応接室に座る際の上座・下座等席次のルール←イラストを用意して1～6で３番目に席次が高いのは・・・のようにしたらいいのでは？
-                -->
+            <?php
+                // 得点をPHPで表示
+                echo "<h2>あなたの得点: $score / " . count($correct_answers) . "</h2>";
+            ?>
+            <a href="question.html">問題集のページに戻る</a>
         </div>
     </body>
 </html>

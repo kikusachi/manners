@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="main-page">
+        <div class="main">
             <header>
                 <h1 class="header-name">東洋ワーク株式会社</h1>
                 <ul class="header-menu">
@@ -16,58 +16,174 @@
                     <li class="menu-name"><a href="interview.html">面接・服装について</a></li>
                 </ul>
             </header>
-
+            <br/>
             <h1 class="main-title-q">マナーなどの確認問題</h1>
             <h4 class="main-title-q">クイズ：次の中から正しい答えを選択してください</h4>
 
             <!-- 入力された情報をphpファイルに送信 postメソッドで指定ファイルにデータ送信-->
             <form action="http://localhost/manners/html/question.php" method="post">
-                <!-- チェックボックス -->
-                <input type="checkbox" name="hello">選択<br/><br/>
-
+                <!-- チェックボックス
+                <input type="checkbox" name="hello">選択<br/><br/> -->
+                <br/>
+                <br/>
                 <!-- 問題１ -->
                 <div class="question1">
-                    <h2 class="question-title">Question1</h2>
+                    <h1 class="question-title">面接</h1>
+                    <h2 class="question-title">問題１：面接入室時の正しいマナーを選びなさい</h2>
+                    <h2>1,面接時の入室の流れとして正しいものを選びなさい</h2>
+                    <div class="radio_text">
+                        a,ドアを３回ノック→「どうぞお入りください」と応答があったら入室<br/>
+                        b,ドアをノック→「どうぞお入りください」と応答がある→「失礼します」と声をかけて入室<br/>
+                        c,ドアを３回ノック→「どうぞお入りください」と応答がある→「失礼いたします」と声を掛けて入室<br/>
+                    </div>
+                    <br/>
+                    <br/>
+                    <h2>2,面接室に入室した際のドアの締め方で正しいものを選びなさい</h2>
+                    <div class="radio_text">
+                        あ.面接官の方を向きながらドアを閉める。<br/>
+                        い.ドアの方に向き直して閉める。<br/>
+                    </div>
+
                     <!-- ラジオボタン -->
                     <label class="choices">
                         <br/>
                         <input class="radio__btn" type="radio" name="question1" value="a" style="transform: scale(1.5);" >
-                        <span class="radio_text">ボタン</span>
+                        <span class="radio_text">A,aとあ</span>
                     </label>
                     <label class="choices">
                         <br/>
                         <input type="radio" name="question1" value="b" style="transform: scale(1.5);">
-                        <span class="radio_text">button</span>
+                        <span class="radio_text">B,bとあ</span>
                     </label>
                     <label class="choices">
                         <br/>
                         <input type="radio" name="question1" value="c" style="transform: scale(1.5);">
-                        <span class="radio_text">ぼたん</span>
+                        <span class="radio_text">C,cとあ</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question1" value="c" style="transform: scale(1.5);">
+                        <span class="radio_text">D,aとい</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question1" value="c" style="transform: scale(1.5);">
+                        <span class="radio_text">E,bとい</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question1" value="c" style="transform: scale(1.5);">
+                        <span class="radio_text">F,cとい</span>
                     </label>
                 </div>
-
+                <br/>
                 <!-- 問題２ -->
                 <div class="question2">
-                    <h2 class="question-title">Question2</h2>
+                    <h2 class="question-title">問題２：面接官が後から入室してくる場合の待ち方で誤っているものを選びなさい</h2>
                     <label class="choices">
                         <br/>
                         <input type="radio" name="question2" value="a" style="transform: scale(1.5);">
-                        <span class="radio_text">ボタン</span>
+                        <span class="radio_text">面接官が入室するまで席に座って待つ</span>
                     </label>
                     <label class="choices">
                         <br/>
                         <input type="radio" name="question2" value="b" style="transform: scale(1.5);">
-                        <span class="radio_text">button</span>
+                        <span class="radio_text">「お掛けになってお待ち下さい」と言われたら指定された席に座って待つ</span>
                     </label>
                     <label class="choices">
                         <br/>
                         <input type="radio" name="question2" value="c" style="transform: scale(1.5);">
-                        <span class="radio_text">ぼたん</span>
+                        <span class="radio_text">面接官が入室するまで立って待つ</span>
+                    </label>
+                </div>
+                <br/>
+                <br/>
+                <!-- 問題3 -->
+                <div class="question3">
+                    <h1 class="question-title">身だしなみ</h1>
+                    <h2 class="question-title">問題3：スーツならどんなものを着てもよい。○か×か</h2>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question3" value="a" style="transform: scale(1.5);">
+                        <span class="radio_text">○</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question3" value="b" style="transform: scale(1.5);">
+                        <span class="radio_text">×</span>
                     </label>
                 </div>
 
+                <!-- 問題4 -->
+                <div class="question4">
+                    <h2 class="question-title">問題４：身だしなみの基本ルールで正しいものは？</h2>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question4" value="a" style="transform: scale(1.5);">
+                        <span class="radio_text">１，清潔・上品・控え目
+                        </span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question4" value="b" style="transform: scale(1.5);">
+                        <span class="radio_text">２，清潔・上品・オシャレ</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question4" value="b" style="transform: scale(1.5);">
+                        <span class="radio_text">３，清潔・ワイルド・控え目</span>
+                    </label>
+                </div>
+                <br/>
+                <br/>
+                <!-- 問題5 -->
+                <div class="question5">
+                    <h1 class="question-title">敬語</h1>
+                    <h2 class="question-title">問題5：課長へ「部長が呼んでいる」と伝えたい</h2>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question5" value="a" style="transform: scale(1.5);">
+                        <span class="radio_text">部長が課長をお呼びになっています</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question5" value="b" style="transform: scale(1.5);">
+                        <span class="radio_text">部長が呼んでおります。</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question5" value="c" style="transform: scale(1.5);">
+                        <span class="radio_text">部長がおいでくださるようにとのことでございます。</span>
+                    </label>
+                </div>
+
+                <!-- 問題6 -->
+                <div class="question6">
+                    <h2 class="question-title">問題6：上司への伝言を書いたメモを机の上に置いた。このメモを見たのか確認したい</h2>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question6" value="a" style="transform: scale(1.5);">
+                        <span class="radio_text">机の上のメモはご覧いただけましたでしょうか？
+                        </span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question6" value="b" style="transform: scale(1.5);">
+                        <span class="radio_text">机の上にメモを置きました。ご確認していただけましたか？</span>
+                    </label>
+                    <label class="choices">
+                        <br/>
+                        <input type="radio" name="question6" value="c" style="transform: scale(1.5);">
+                        <span class="radio_text">机に置いたメモ、ご確認いただけましたでしょうか？</span>
+                    </label>
+                </div>
+                
+                
                 <!-- 送信ボタン -->
-                <br/><br/><input type="submit" class="send_q" value="送信" >
+                <br/>
+                <div class="send_buttom">
+                    <input type="submit" class="send_q" value="送信" >
+                </div>
 
                 <!-- 相談したいこと
                 me:明日は挨拶や敬語などの資料作成と発表

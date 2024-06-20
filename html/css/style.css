@@ -145,15 +145,17 @@ header{
     margin: 70px;
 }
 
-ul {
+ul
+{
     list-style: none;
-  }
+}
 
 .hidden
 {
     display: none;
 }
 
+/*クイズ画面*/
 .main-title-q
 {
     display: flex;
@@ -172,7 +174,16 @@ ul {
     font-size: 25px;
 }
 
-.send_q
+.send_buttom
 {
+    display: flex;
+    justify-content: center;
+}
 
+.send_q {
+    width: 150px;
+    height: 50px;
+    font-size: 20px; /* フォントサイズ */
+    padding: 10px;  /* 内側の余白 */
+    border-radius: 5px;
 }
