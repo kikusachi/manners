@@ -3,48 +3,182 @@
     padding: 0;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(227, 221, 221);
-}
-
 header{
     width: 100%;
-    height: 130px;
+    height: 120px;
     background-color: rgb(106, 106, 194);
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+}
+
+.header-self{
+    margin-left: 50px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1rem;
+}
+
+.header-top a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 20px;
+    margin-right: 50px;
 }
 
 .header-name{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 45px;
+    margin-left: 30px;
 }
 
 .header-menu{
     display: flex;
-    margin-left: 90px;
 }
 
 .menu-name a{
     text-decoration: none;
-    color: antiquewhite;
-    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.self-page{
+    width: 100%;
+    height: 100vh;
+    padding: 0 24px;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    border-left: double 50px #4ec4d3;/*左線*/
+    border-right: double 50px #4ec4d3;/*右線*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.self-sub{
+    position: relative;
+}
+
+.self-sub:before{
+    content: '';            /* 空の要素を作る */
+    width: 680px;           /* 幅指定 */
+    height: 500px;          /* 高さ指定 */
+    border-radius:  50%;    /* 丸くする */
+    border: solid #8d8d8d;     /* 枠線指定 */
+    display:  block;        /* ブロック要素にする */
+    position:  absolute;    /* 位置調整 */
+    left:  310px;               /* 位置調整 */
+    right:  0;              /* 位置調整 */
+    margin:  auto;          /* 位置調整 */
+    top: 0;                 /* 位置調整 */
+    z-index: 1;            /* 重なり調整 */
+}
+
+.self-sub:after {
+    content: '';            /* 空の要素を作る */
+    width: 660px;           /* 幅指定 */
+    height: 480px;          /* 高さ指定 */
+    border-radius:  50%;    /* 丸くする */
+    border: 1px solid #8d8d8d; /* 枠線指定 */
+    display:  block;        /* ブロック要素にする */
+    position:  absolute;    /* 位置調整 */
+    left:  320px;               /* 位置調整 */
+    right:  0;              /* 位置調整 */
+    margin:  auto;          /* 位置調整 */
+    top: 10px;               /* 位置調整 */
+    z-index: 1;            /* 重なり調整 */
+}
+
+.self-title{
+    padding-bottom: 1px;
+    color: #333;
+    border-bottom: solid 3px #455586;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    z-index: 1; 
+}
+
+.self-title:before {
+    content:  '';               /* 空白の要素を作る */
+    background-color: #ffeaac;  /* 背景色指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    left:  0;                   /* 位置調整 */
+    height: 90px;               /* 高さ指定 */
+    width: 90px;                /* 幅指定 */
+    border-radius:  50%;        /* 丸くする */
+    top: 0;                     /* 位置調整 */
+    z-index:  -1;               /* 重なり調整 */
+}
+
+.self-main{
+    margin-left: 150px;
+}
+
+.image-self{
+    width: 250px;
+    height: 390px;
+    border-radius: 40%;
+    margin: 10px 0;
+}
+
+.self-profile{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.self-title-name{
+    width: 120px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: aquamarine;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.self-text{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .main-page{
     width: 100%;
     height: 100%;
-    padding-top: 15px;
+    border-left: double 50px #4ec4d3;/*左線*/
+    border-right: double 50px #4ec4d3;/*右線*/
+    padding: 0 24px;
 }
 
 .title{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-name{
     font-size: 48px;
-    margin: 50px 0;
-    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    position:  relative;    /* 位置調整 */
+    font-weight:  normal;   /* 文字の太さ調整 */
+    border-bottom: solid 4px rgba(76, 145, 175, 0.6);        /* 線指定 */
+    border-radius: 0px 0px 160px 180px/0px 0px 20px 4px;    /* 角丸指定 */
 }
 
 .images{
@@ -137,22 +271,28 @@ header{
 }
 
 .contents{
-    margin-left: 300px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 .content{
     font-size: 40px;
-    margin: 70px;
+    padding: 30px;
 }
 
-ul
-{
+ul {
     list-style: none;
-}
+  }
 
 .hidden
 {
     display: none;
+}
+
+footer{
+    width: 100%;
+    height: 65px;
+    background-color: rgb(183, 183, 183);
 }
 
 /*クイズ画面*/
